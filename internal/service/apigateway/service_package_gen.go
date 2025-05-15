@@ -21,6 +21,16 @@ func (p *servicePackage) FrameworkDataSources(ctx context.Context) []*types.Serv
 			TypeName: "aws_api_gateway_api_keys",
 			Name:     "API Keys",
 		},
+		{
+			Factory:  newDataSourceModel,
+			TypeName: "aws_api_gateway_model",
+			Name:     "Model",
+		},
+		{
+			Factory:  newDataSourceModels,
+			TypeName: "aws_api_gateway_models",
+			Name:     "Models",
+		},
 	}
 }
 

@@ -21,6 +21,16 @@ func (p *servicePackage) FrameworkDataSources(ctx context.Context) []*types.Serv
 			TypeName: "aws_api_gateway_api_keys",
 			Name:     "API Keys",
 		},
+		{
+			Factory:  newDataSourceRequestValidator,
+			TypeName: "aws_api_gateway_request_validator",
+			Name:     "Request Validator",
+		},
+		{
+			Factory:  newDataSourceRequestValidators,
+			TypeName: "aws_api_gateway_request_validators",
+			Name:     "Request Validators",
+		},
 	}
 }
 
